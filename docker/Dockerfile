@@ -8,4 +8,4 @@ run pip install salic-receipt==0.0.4
 
 workdir /dataset
 
-cmd salic-receipt pdfs 100000 
+cmd salic-receipt pdfs 10000 
