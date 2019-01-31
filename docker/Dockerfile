@@ -1,11 +1,9 @@
-from python:3.6-slim
+FROM python:3.6-slim
 
-run python -m pip install --upgrade pip
+RUN python -m pip install --upgrade pip
 
-add ./requirements.txt /tmp
+RUN pip install salic-receipt==0.0.4
 
-run pip install salic-receipt==0.0.4
+WORKDIR /dataset
 
-workdir /dataset
-
-cmd salic-receipt pdfs 10000 
+CMD salic-receipt pdfs 10000 
