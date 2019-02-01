@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  dataset:
+    build:
+      context: .
+      dockerfile: ./docker/dataset.Dockerfile
+    restart: unless-stopped
+    volumes:
+      - ./pdfs:/dataset/pdfs
+
+  notebooks:
+    build:
+      context: .
+      dockerfile: ./docker/notebooks.Dockerfile
+    volumes:
+      - ./pdfs:/work/pdfs
+      - ./notebooks:/work/notebooks
+    ports:
+      - 8888:8888

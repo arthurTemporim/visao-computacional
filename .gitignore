@@ -102,3 +102,6 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Igonere image, pdfs and dataset like files
+pdfs/
