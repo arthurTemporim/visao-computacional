@@ -2,13 +2,14 @@ from python:3.6-slim
 
 user root
 
-run apt update && apt install -y git gcc make curl
-
-run python -m pip install --upgrade pip
+run apt update && apt install -y git gcc make curl libgtk2.0-dev \
+		tesseract-ocr libtesseract-dev
 
 add ./requirements.txt /tmp
 
-run pip install -r /tmp/requirements.txt
+run pip install -r /tmp/requirements.txt 
+
+run python -m pip install --upgrade pip
 
 run pip install jupyter
 
