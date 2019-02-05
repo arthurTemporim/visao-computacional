@@ -13,6 +13,8 @@ run pip install -r /tmp/requirements.txt
 
 run pip install jupyter
 
+run apt-get install -y tesseract-ocr-eng tesseract-ocr-por
+
 workdir /work/
 
 cmd jupyter-notebook --allow-root --NotebookApp.token='' --ip=0.0.0.0 --NotebookApp.password=''
