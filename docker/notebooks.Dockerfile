@@ -7,9 +7,9 @@ run apt update && apt install -y git gcc make curl libgtk2.0-dev \
 
 add ./requirements.txt /tmp
 
-run pip install -r /tmp/requirements.txt 
-
 run python -m pip install --upgrade pip
+
+run pip install -r /tmp/requirements.txt 
 
 run pip install jupyter
 
