@@ -106,4 +106,5 @@ venv.bak/
 # Igonere image, pdfs and dataset like files
 pdfs/
 notasFiscais/
+notasfiscais/
 */images/*
