@@ -7,14 +7,14 @@ services:
       dockerfile: ./docker/dataset.Dockerfile
     restart: unless-stopped
     volumes:
-      - ./pdfs:/dataset/pdfs
+      - ./notasfiscais:/dataset/pdfs
 
   notebooks:
     build:
       context: .
       dockerfile: ./docker/notebooks.Dockerfile
     volumes:
-      - ./pdfs:/work/pdfs
+      - ./notasfiscais:/work/notasfiscais
       - ./notebooks:/work/notebooks
     ports:
       - 8888:8888
